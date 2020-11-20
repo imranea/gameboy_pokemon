@@ -1,14 +1,8 @@
-import {CLICK, FETCH_POKEMON_SUCCESS,FETCH_POKEMON_PENDING,SHOW_POKEMON,CAPTURE_POKEMON} from "./action" // récupérer le click de action
+import {FETCH_POKEMON_SUCCESS,FETCH_POKEMON_PENDING,SHOW_POKEMON,CAPTURE_POKEMON} from "./action" 
 import catchPokemon from "./catchPokemon"
 
-// Creation de la fonction reducer
 const reducer = (state,action) =>{
     switch(action.type){
-        case CLICK:
-            return {
-                ...state, //On recopie le state
-                click: state.click+1
-        }
         case FETCH_POKEMON_SUCCESS:{
             return{
                 ...state,

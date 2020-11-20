@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Provider from "./store/store" //importer Provider de store
+import Provider from "./store/store"
 
 import App from "./App";
 
@@ -13,5 +13,3 @@ ReactDOM.render(
   </React.StrictMode>,
   rootElement
 );
-
-/* Englober l'APP par Provider de store */

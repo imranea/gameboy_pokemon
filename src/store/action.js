@@ -1,4 +1,3 @@
-export const CLICK = "CLICK" 
 export const FETCH_POKEMON_SUCCESS = "FETCH_POKEMON_SUCCESS";
 export const FETCH_POKEMON_PENDING = "FETCH_POKEMON_PENDING";
 export const CAPTURE_POKEMON = "CAPTURE_POKEMON"
@@ -20,7 +19,7 @@ export const showPokemon = (pokemons) => {
 }
 
 export const capturePokemon = () =>{
-    console.log("catch")
+    //console.log("catch")
     const random = Math.floor(Math.random()*255);
     return dispatch =>{
         dispatch({type:CAPTURE_POKEMON,random})

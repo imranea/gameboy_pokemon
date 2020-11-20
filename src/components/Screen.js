@@ -4,7 +4,7 @@ import {connect} from "react-redux"
 const Screen = ({onScreen,pokemons}) => {
   const finish = pokemons.filter(pokemon=>!pokemon.isCatch)
   console.log(finish.length)
-  if(onScreen.id && finish.length !=0){
+  if(onScreen.id && finish.length !==0){
     if(pokemons[onScreen.id-1].isCatch){
       return(
         <>
@@ -28,7 +28,7 @@ const Screen = ({onScreen,pokemons}) => {
   );
 };
 
-const mapStateToProps = ({onScreen,pokemons}) =>{ // norme de nomage , on recupere le state click
+const mapStateToProps = ({onScreen,pokemons}) =>{ 
   return {
     onScreen,
     pokemons

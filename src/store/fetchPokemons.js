@@ -1,6 +1,6 @@
-import {fetchPokemonSuccess,fetchPokemonPending} from "./action" // fichier séparer où réalise la fonction souhaité et on appelle l'action
+import {fetchPokemonSuccess,fetchPokemonPending} from "./action" 
 
-const numberOfPokemon = 2
+const numberOfPokemon = 20
 
 const urls=[]
 
@@ -13,7 +13,7 @@ const requests = urls.map(url =>fetch(url))
 export default () => {
     return dispatch =>{
         dispatch(fetchPokemonPending())
-        Promise.all(requests) // ne passe pas à la suite tant que l'ensemble des requetes n'est pas réalisé une sorte de grand await
+        Promise.all(requests) // Does not move on until all requests have been completed
         .then(responses => Promise.all(responses.map(res => res.json())))
         .then(pokemons => pokemons.map(pokemon =>({
             id:pokemon.id,

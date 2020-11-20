@@ -5,7 +5,6 @@ import PokemonItem from "./PokemonItem";
 const PokeList = ({click,pokemons,pending}) => {
   return (
     <div className="list-container">
-      <h2>Try : {click}</h2>
       <h2>{`${pokemons.filter(pokemon=>pokemon.isCatch).length} / ${pokemons.length}`}</h2>
       <ul>
       {pokemons.map((pokemon)=>(
@@ -16,9 +15,8 @@ const PokeList = ({click,pokemons,pending}) => {
   );
 };
 
-const mapStateToProps = ({click,pokemons,pending}) =>{ // norme de nomage , on recupere le state click
+const mapStateToProps = ({click,pokemons,pending}) =>{
   return {
-    click,
     pokemons,
     pending
   };
